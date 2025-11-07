@@ -7,6 +7,8 @@ from reportlab.pdfgen import canvas
 from tkinter import filedialog
 import textwrap
 import time
+from PIL import Image, ImageTk
+from io import BytesIO
 # Function to fetch data from Wikipedia
 def get_country_info():
     country = entry.get().strip()
@@ -66,6 +68,8 @@ def get_country_info():
                 f.write(imag_data)
         else:
             print("error in url",URL)
+    
+
         info_text.delete(1.0, tk.END)
         if info_box:
             for row in info_box.find_all("tr"):
@@ -75,9 +79,27 @@ def get_country_info():
                     info_text.insert(tk.END, f"{header.text.strip()}: {data.text.strip()}\n")
         else:
             info_text.insert(tk.END, "No infobox found.")
-
+        set_background()
     except Exception as e:
         messagebox.showerror("Error", f"Something went wrong:\n{e}")
+
+
+def set_background():
+    try:
+        
+        img = Image.open("image.jpg")
+        img = img.resize((700, 600))
+        # Convert for Tkinter
+        bg_image = ImageTk.PhotoImage(img)
+
+        # Create a label to hold the background
+        background_label.config(image=bg_image)
+        background_label.image = bg_image  # prevent garbage collection
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+        background_label.lower()
+    except Exception as e:
+        print("Error:", e)
 
 def save_to_pdf(title, summary, infobox):
     file_path = filedialog.asksaveasfilename(
@@ -185,4 +207,8 @@ def call_save_pdf():
                  
 pdf_button = ttk.Button(root,text = "Pdf",command=call_save_pdf)
 pdf_button.pack(side=tk.BOTTOM)
+
+background_label = tk.Label(root)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+background_label.lower()
 root.mainloop()
