@@ -125,7 +125,7 @@ Contributions are welcome! Feel free to:
 ## 📧 Contact
 
 For questions or feedback, reach out via:
-- LinkedIn: [Your Profile](https://linkedin.com/in/gurmeet-kumar)
+- LinkedIn: [Gurmeet Kumar](https://linkedin.com/in/gurmeet-kumar)
 
 ---
 
