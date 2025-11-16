@@ -114,6 +114,8 @@ def save_to_pdf(title, summary, infobox):
     pdf = canvas.Canvas(file_path, pagesize=landscape(legal))
     width, height = landscape(legal)
 
+    pdf.setFont("Helvetica-Bold", 16) 
+    pdf.drawString(250, height - 50, f"Wikipedia Information: {title}")
 
     # --- Summary Section ---
     pdf.setFont("Helvetica-Bold", 14)
