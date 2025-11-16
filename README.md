@@ -59,7 +59,8 @@ python main.py
 
 ## 📸 Screenshots
 
-*(Add screenshots of your application here)*
+<img width="878" height="790" alt="image" src="https://github.com/user-attachments/assets/3957e5ac-e229-4e7a-a576-a1887f771a8e" />
+
 
 ## 🎯 Project Purpose
 
@@ -111,20 +112,22 @@ Contributions are welcome! Feel free to:
 ## 📝 Future Improvements
 
 - [ ] Add support for multiple languages
-- [ ] Implement caching mechanism
 - [ ] Add more export formats (CSV, JSON)
 - [ ] Include historical data comparison
 - [ ] Add search suggestions/autocomplete
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
 - Wikipedia for providing free access to information
 - BeautifulSoup documentation and community
 - Python community for excellent libraries
+
+## 📧 Contact
+
+For questions or feedback, reach out via:
+- LinkedIn: [Your Profile](https://linkedin.com/in/gurmeet-kumar)
+
+---
 
 ⭐ If you found this project helpful, please give it a star!
 
