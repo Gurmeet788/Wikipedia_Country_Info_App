@@ -8,7 +8,7 @@ from tkinter import filedialog
 import textwrap
 import time
 from PIL import Image, ImageTk
-from io import BytesIO
+
 # Function to fetch data from Wikipedia
 def get_country_info():
     country = entry.get().strip()
@@ -114,8 +114,6 @@ def save_to_pdf(title, summary, infobox):
     pdf = canvas.Canvas(file_path, pagesize=landscape(legal))
     width, height = landscape(legal)
 
-    pdf.setFont("Helvetica-Bold", 16)
-    pdf.drawString(50, height - 50, f"Wikipedia Information: {title}")
 
     # --- Summary Section ---
     pdf.setFont("Helvetica-Bold", 14)
